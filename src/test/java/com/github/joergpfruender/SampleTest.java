@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Testcontainers
-public class SampleTest implements HasWebDriver {
+public class SampleTest {
 
     @Container
     BrowserWebDriverContainer container = new BrowserWebDriverContainer()
@@ -71,8 +71,4 @@ public class SampleTest implements HasWebDriver {
         org.junit.Assert.fail("fail"); //fail to get screenshot
     }
 
-    @Override
-    public WebDriver getWebDriver() {
-        return webDriver;
-    }
 }
